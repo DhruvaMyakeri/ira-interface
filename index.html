@@ -578,13 +578,8 @@
       <button id="memBtn" onclick="toggleMemory()">Memory</button>
       <div class="temp-control">
         <span class="temp-label">temp</span>
-        <input
-          type="range"
-          class="temp-slider"
-          id="tempSlider"
-          min="0.1" max="1.5" step="0.05" value="0.8"
-          oninput="document.getElementById('tempVal').textContent = parseFloat(this.value).toFixed(2)"
-        />
+        <input type="range" class="temp-slider" id="tempSlider" min="0.1" max="1.5" step="0.05" value="0.8"
+          oninput="document.getElementById('tempVal').textContent = parseFloat(this.value).toFixed(2)" />
         <span class="temp-value" id="tempVal">0.80</span>
       </div>
     </div>
@@ -592,11 +587,8 @@
     <!-- Memory panel -->
     <div class="memory-panel" id="memoryPanel">
       <span class="memory-panel-label">about you — ira will remember this</span>
-      <textarea
-        id="memoryInput"
-        placeholder="e.g. works in tech, 23 years old, plays guitar, lives in Delhi…"
-        oninput="memoryContext = this.value.trim()"
-      ></textarea>
+      <textarea id="memoryInput" placeholder="e.g. works in tech, 23 years old, plays guitar, lives in Delhi…"
+        oninput="memoryContext = this.value.trim()"></textarea>
     </div>
 
     <div class="messages" id="messages"></div>
@@ -708,7 +700,7 @@
     let gatherTimer = null;
     let gatherStarted = false;
     let gatherStart = 0;
-    const DEBOUNCE_MS = 4000;   // initial pause after LAST message
+    const DEBOUNCE_MS = 2000;   // initial pause after LAST message
     const GATHER_MS = 5000;  // max window to collect more messages
 
     // ── FLUSH QUEUE ───────────────────────────────────────
